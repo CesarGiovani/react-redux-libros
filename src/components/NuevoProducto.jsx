@@ -1,8 +1,16 @@
 import React from 'react';
 
+// Redux
+import {crearNuevoProductoAction} from '../actions/productosActions'
+import {useDispatch} from 'react-redux'
+
 const NuevoProducto = () => {
+
+	// state
 	const [ nombre, setNombre ] = React.useState('');
 	const [ precio, setPrecio ] = React.useState('');
+
+	// Crear nuevo producto
 
 	const submitNuevoProducto = (e) => {
 		e.preventDefault();
